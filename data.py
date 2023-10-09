@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-from keras import models
 import os
 
 # read in the metadata
