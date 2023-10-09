@@ -4,7 +4,7 @@ import os
 
 def cleandata():
     
-    df = pd.read_csv(os.path.join(os.getcwd(), 'train_metadata.csv'))
+    df = pd.read_csv('train_metadata.csv'))
 
     print("Cleaning data...")
 
