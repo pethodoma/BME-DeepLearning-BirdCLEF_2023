@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 
-# read in the metadata
 
 def cleandata():
     
