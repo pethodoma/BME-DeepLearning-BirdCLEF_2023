@@ -6,6 +6,17 @@ def cleandata():
     
     df = pd.read_csv('train_metadata.csv')
 
+    print("Fill missing data")
+
+    # get columns with missing data
+    cols_w_missing_data = df.columns[df.isnull().any()]
+
+    # fill missing data with the average of the other values in the column
+    for column in cols_w_missing_data:
+        mean = df[column].mean()
+        df[column].fillna(mean,inplace=True)
+
+
     print("Cleaning data...")
 
     # get the names of the files with a rating of 0.0 or 0.5 - these are the files we want to get rid of
