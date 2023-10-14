@@ -1,5 +1,22 @@
 import pandas as pd
 import os
+import zipfile
+import gdown
+
+def download_data():
+    
+    # download the database zip file from drive
+    url = 'https://drive.google.com/uc?id=1DFmudcCxYPOoaeBBSRh1yAsLLz03M4KV'
+    zipfile = 'database.zip'
+
+    gdown.download(url,zipfile)
+
+    # unzip database
+    zip_file = 'database.zip'
+
+    with zipfile.ZipFile(zip_file, 'r') as zip_ref:
+        zip_ref.extractall()
+
 
 
 def cleandata():
