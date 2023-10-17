@@ -1,10 +1,38 @@
 import pandas as pd
 import os
+import zipfile
+import gdown
+
+def download_data():
+    
+    # download the database zip file from drive
+    url = 'https://drive.google.com/uc?id=1DFmudcCxYPOoaeBBSRh1yAsLLz03M4KV'
+    zipfile = 'database.zip'
+
+    gdown.download(url,zipfile)
+
+    # unzip database
+    zip_file = 'database.zip'
+
+    with zipfile.ZipFile(zip_file, 'r') as zip_ref:
+        zip_ref.extractall()
+
 
 
 def cleandata():
     
     df = pd.read_csv('train_metadata.csv')
+
+    print("Fill missing data")
+
+    # get columns with missing data
+    cols_w_missing_data = df.columns[df.isnull().any()]
+
+    # fill missing data with the average of the other values in the column
+    for column in cols_w_missing_data:
+        mean = df[column].mean()
+        df[column].fillna(mean,inplace=True)
+
 
     print("Cleaning data...")
 
