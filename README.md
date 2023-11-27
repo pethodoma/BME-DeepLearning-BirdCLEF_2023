@@ -13,6 +13,12 @@ The project is a Kaggle competition named [BirdCLEF 2023](https://www.kaggle.com
 
 ## Repository Contents
 
-There is currently only one file in the repository:
+There are currently only two files in the repository:
 
 - [Deep_Dream_Team_Milestone1.ipynb](Deep_Dream_Team_Milestone1.ipynb): This Jupyter Notebook contains the preprocessing steps for the project.
+- 
+
+
+## Info about projects current state
+
+Ther
