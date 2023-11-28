@@ -17,7 +17,9 @@ There are currently three files in the repository:
 
 - [Deep_Dream_Team_Milestone1.ipynb](Deep_Dream_Team_Milestone1.ipynb): This Jupyter Notebook contains the preprocessing steps for the project. This is outdated, the current preprocessing steps can be found in:
 - [preprocess_final.ipynb](preprocess_final.ipynb): This contains all the neccesar code to preprocess the whole dataset. Running it creates a parent folder with the name 'final samples' and child folders named after the bird labels. Every folder contains the respective chirps to the bird.
-- [Milestone2_Bird_Unet_with_data_loader.ipynb](Milestone2_Bird_Unet_with_data_loader.ipynb) : This Jupyter Notebook contains one training with the Unet model.
+The two notebooks below were run using a 13100 files long dataset that we created by randomly picking 50 samples from all the birds.
+- [Experimenting_with_tensorflow_data_pipeline.ipynb](Experimenting_with_tensorflow_data_pipeline.ipynb): This contains the experimenting steps for creating a data pipeline for efficiently loading the spectrograms and a training on a simple network to see if it actually works.
+- [Milestone2_Bird_Unet_with_data_loader.ipynb](Milestone2_Bird_Unet_with_data_loader.ipynb): This Jupyter Notebook contains one training with the Unet model. This file has to be run for training.
 
 
 
