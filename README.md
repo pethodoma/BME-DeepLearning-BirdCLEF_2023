@@ -20,6 +20,7 @@ There are currently three files in the repository:
 The two notebooks below were run using a 13100 files long dataset that we created by randomly picking 50 samples from all the birds.
 - [Experimenting_with_tensorflow_data_pipeline.ipynb](Experimenting_with_tensorflow_data_pipeline.ipynb): This contains the experimenting steps for creating a data pipeline for efficiently loading the spectrograms and a training on a simple network to see if it actually works.
 - [Milestone2_Bird_Unet_with_data_loader.ipynb](Milestone2_Bird_Unet_with_data_loader.ipynb): This Jupyter Notebook contains one training with the Unet model. This file has to be run for training.
+- [pretrained_model_transfer_learning.ipynb](pretrained_model_transfer_learning.ipynb): This Jupyter Notebook contains experimenting with google's pretrained model and using transfer learning to build our model
 
 
 
