@@ -11,7 +11,7 @@
 
 The project is a Kaggle competition named [BirdCLEF 2023](https://www.kaggle.com/competitions/birdclef-2023). The primary goal is to train a model capable of predicting whether each of the 264 species of birds provided in the training data can be heard in a given sound sample.
 
-## Repository Contents
+## Repository Contents -to be edited!!!
 
 There are currently three files in the repository:
 
