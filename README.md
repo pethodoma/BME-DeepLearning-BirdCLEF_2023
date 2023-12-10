@@ -26,10 +26,10 @@ The project is a Kaggle competition named [BirdCLEF 2023](https://www.kaggle.com
 - [preprocess_final.ipynb](preprocess_final.ipynb): This notebook contains the code for the preprocess.
 - [final_model_training.ipynb](final_model_training.ipynb): This notebook contains the training process we used to train the final model.
 - [model_eval.ipynb](model_eval.ipynb): This notebook contains the evaluation of the model
-- [Documentation](Documentation): This pdf contains the project documentation
+- [Documentation.pdf](Documentation-pdf): This pdf contains the project documentation
 
 ## Preprocessing data, training, evaluating model
 *Preprocessing data:* The notebook [preprocess_final.ipynb](preprocess_final.ipynb) needs to be run. This contains code for downloading all the files needed (given by kaggle) and create the folders with the final, usable samples\
 *Training the model:* This can be done by running the [final_model_training.ipynb](final_model_training.ipynb) notebook. The notebook contains code for downloading the png files we used for training, finding the optimal hyperparameters and training the model accordingly.\
 *Model evaluation:* The notebook [model_eval.ipynb](model_eval.ipynb) must be run. In this notebook, we can see that the accuracy is as expected according to the training process, and there are predictions given for the test sample used by Kaggle.\
-The elaborate documantetaion can be seen in [Documentation](Documentation)
+The elaborate documantetaion can be seen in [Documentation.pdf](Documentation.pdf)
