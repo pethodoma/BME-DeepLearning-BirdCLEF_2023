@@ -11,18 +11,23 @@
 
 The project is a Kaggle competition named [BirdCLEF 2023](https://www.kaggle.com/competitions/birdclef-2023). The primary goal is to train a model capable of classifyng sound samples of bird calls based on which bird they belong
  to.
-## Repository Contents -to be edited!!!
+## Repository Contents
 
-There are currently three files in the repository:
-
-- [Deep_Dream_Team_Milestone1.ipynb](Deep_Dream_Team_Milestone1.ipynb): This Jupyter Notebook contains the preprocessing steps for the project. This is outdated, the current preprocessing steps can be found in:
-- [preprocess_final.ipynb](preprocess_final.ipynb): This contains all the neccesar code to preprocess the whole dataset. Running it creates a parent folder with the name 'final samples' and child folders named after the bird labels. Every folder contains the respective chirps to the bird.
-The two notebooks below were run using a 13100 files long dataset that we created by randomly picking 50 samples from all the birds.
-- [Experimenting_with_tensorflow_data_pipeline.ipynb](Experimenting_with_tensorflow_data_pipeline.ipynb): This contains the experimenting steps for creating a data pipeline for efficiently loading the spectrograms and a training on a simple network to see if it actually works.
-- [Milestone2_Bird_Unet_with_data_loader.ipynb](Milestone2_Bird_Unet_with_data_loader.ipynb): This Jupyter Notebook contains one training with the Unet model. This file has to be run for training.
-- [pretrained_model_transfer_learning.ipynb](pretrained_model_transfer_learning.ipynb): This Jupyter Notebook contains experimenting with google's pretrained model and using transfer learning to build our model
-
+### The files in the testruns folder
+- [CNN_curriculum_learning.ipynb](testruns/CNN_curriculum_learning.ipynb): This notebook contains a testrun where we tried curriculum learning for the classes with above 100 samples.
+- [Custom_datagenerator_augmentation.ipynb](testruns/Custom_datagenerator_augmentation.ipynb): This notebook contains a testrun for the classes with above 500 samples using a costum datagenerator for augmentation.
+- [Custom_datagenerator_augmentation_Resnet50.ipynb](testruns/Custom_datagenerator_augmentation_Resnet50.ipynb): This notebook contains our try with Resnet 50, for the classes with above 500 samples.
+- [Milestone2_Bird_Unet_with_data_loader.ipynb](testruns/Milestone2_Bird_Unet_with_data_loader.ipynb): This notebook contains one training with the Unet model. This file has to be run for training.
+- [pretrained_model_transfer_learning.ipynb](testruns/pretrained_model_transfer_learning.ipynb): This  notebook contains experimenting with google's pretrained model and using transfer learning to build our model.
+- [Best_performance_30_classes.ipynb](testruns/Best_performance_30_classes.ipynb): This notebook contains a convnetwork model we trained with only the classes with above 500 samples. With this model we could reach more than 0.72 validation accuracy.
 
 
-## Info about projects current state
-We have done the preprocessing steps, and are currently working on training the model
+### Base folder
+- [preprocess_final.ipynb](preprocess_final.ipynb): This notebook contains the code for the preprocess.
+- [final_model_training.ipynb](final_model_training.ipynb): This notebook contains the training process we used to train the final model.
+
+
+## Preprocessing data, training, evaluating model
+*Preprocessing data:* The notebook [preprocess_final.ipynb](preprocess_final.ipynb) needs to be run. This contains code for downloading all the files needed (given by kaggle) and create the folders with the final, usable samples\
+*Training the model:* This can be done by running the [final_model_training.ipynb](final_model_training.ipynb) notebook. The notebook contains code for downloading the png files we used for training, finding the optimal hyperparameters and training the model accordingly.\
+*Model evaluation:* The notebook [model_eval.ipynb](model_eval.ipynb) must be run. In this notebook, we can see that the accuracy is as expected according to the training process, and there are predictions given for the test sample used by Kaggle.
